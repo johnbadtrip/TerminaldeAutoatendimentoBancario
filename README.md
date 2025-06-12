@@ -6,8 +6,6 @@ Este projeto é uma simulação via console de um caixa eletrônico. Ele não se
 
 O usuário interage com o sistema através do terminal, podendo consultar saldo, realizar saques e depósitos em uma conta pré-definida.
 
-**Link para o repositório:** `https://github.com/seu-usuario/terminal-bancario`
-
 ## Funcionalidades
 
 * **Autenticação Simples:** O usuário informa o número da conta para iniciar.
@@ -27,10 +25,3 @@ O usuário interage com o sistema através do terminal, podendo consultar saldo,
         * **`ValidacaoService` (Classe de Serviço):** Lógica separada para validar entradas do usuário e regras de negócio.
     * **Controle de Fluxo:** Uso de `switch-case` para o menu e `while` para manter a aplicação rodando.
     * **Tratamento de Exceções:** Para lidar com entradas inválidas do usuário (ex: digitar texto em vez de número).
-
-## Como Executar
-
-1.  Clone o repositório: `git clone https://github.com/seu-usuario/terminal-bancario.git`
-2.  Navegue até o diretório `src`.
-3.  Compile o código: `javac com/terminal/*.java`
-4.  Execute a classe principal: `java com.terminal.Main`
