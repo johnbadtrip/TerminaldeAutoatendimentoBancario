@@ -1,27 +1,39 @@
-# Simulação de Terminal de Autoatendimento Bancário
+Simulação de Terminal de Autoatendimento Bancário
 
-## Sobre o Projeto
+💻 Sobre o Projeto
 
-Este projeto é uma simulação via console de um caixa eletrônico. Ele não se conecta a um banco de dados real, mas simula as operações em memória. O objetivo é demonstrar um design de software robusto e a aplicação correta dos pilares da Programação Orientada a Objetos (Encapsulamento, Herança, Polimorfismo).
+Este projeto é uma aplicação de console que simula as operações básicas de um caixa eletrônico (ATM). O foco principal foi aplicar os princípios da Programação Orientada a Objetos (POO) para modelar um cenário do mundo real.
 
-O usuário interage com o sistema através do terminal, podendo consultar saldo, realizar saques e depósitos em uma conta pré-definida.
+A interação com o usuário é feita via terminal, onde ele pode criar uma conta e realizar operações como consulta de saldo, depósito e saque.
 
-## Funcionalidades
+🛠️ Tecnologias Utilizadas
 
-* **Autenticação Simples:** O usuário informa o número da conta para iniciar.
-* **Menu de Opções:** Exibe um menu interativo (Consultar Saldo, Depositar, Sacar, Sair).
-* **Operações Bancárias:**
-    * **Consultar Saldo:** Exibe o saldo atual da conta.
-    * **Depositar:** Adiciona um valor ao saldo.
-    * **Sacar:** Remove um valor do saldo, com validação de saldo suficiente.
-* **Encapsulamento:** O saldo da conta não pode ser modificado diretamente, apenas através dos métodos `sacar()` e `depositar()`.
+    Java 17
 
-## Tecnologias Utilizadas
+✨ Funcionalidades
 
-* **Java 17 (Core):**
-    * **Foco Principal em POO:**
-        * **`ContaBancaria` (Classe Principal):** Encapsula os dados (saldo, número) e comportamentos (sacar, depositar).
-        * **`Terminal` (Classe de Interface):** Responsável por interagir com o usuário via `Scanner`.
-        * **`ValidacaoService` (Classe de Serviço):** Lógica separada para validar entradas do usuário e regras de negócio.
-    * **Controle de Fluxo:** Uso de `switch-case` para o menu e `while` para manter a aplicação rodando.
-    * **Tratamento de Exceções:** Para lidar com entradas inválidas do usuário (ex: digitar texto em vez de número).
+    Criação de Conta: Permite que um novo usuário crie uma conta bancária com nome, agência, número da conta e um saldo inicial.
+    Consulta de Saldo: Exibe o saldo atual da conta do usuário.
+    Realizar Depósito: Permite ao usuário adicionar um valor ao seu saldo.
+    Realizar Saque: Permite ao usuário retirar um valor do seu saldo, com validação para não permitir saldo negativo.
+
+⚙️ Como Executar
+
+    Clone o repositório:
+    git clone https://github.com/johnbadtrip/TerminaldeAutoatendimentoBancario.git
+
+    Navegue até o diretório do projeto:
+    cd TerminaldeAutoatendimentoBancario/src
+
+    Compile o arquivo Java:
+    javac ContaTerminal.java
+
+    Execute a aplicação:
+    java ContaTerminal
+
+🎓 O que aprendi
+
+    Abstração: Modelar a entidade Conta com seus atributos e comportamentos essenciais.
+    Encapsulamento: Proteger os dados da conta (como o saldo) e expor apenas as operações seguras (depósito e saque).
+    Herança e Polimorfismo (Próximos Passos): O projeto serve como base para futuras expansões, como a criação de diferentes tipos de contas (Conta Corrente, Conta Poupança) que herdem de uma Conta base.
+    Interação com o Usuário: Utilização da classe Scanner para receber dados do usuário via console de forma interativa.
